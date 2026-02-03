@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PixelCNN++ → Flux.1 | Pipeline Web</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <p class="tag">Pipeline Web</p>
+        <h1>PixelCNN++ → Flux.1</h1>
+        <p class="subtitle">
+          Panel web para entender el flujo, preparar imágenes y lanzar el job de video con tus
+          binarios reales.
+        </p>
+        <div class="cta-row">
+          <a class="cta" href="#pasos">Ver pasos</a>
+          <a class="cta secondary" href="#comandos">Comandos rápidos</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="pasos" class="section">
+        <h2>Flujo completo</h2>
+        <ol class="steps">
+          <li>
+            <strong>Entrena o carga tu modelo PixelCNN++.</strong>
+            <span>Prepara un dataset consistente y genera muestras con coherencia visual.</span>
+          </li>
+          <li>
+            <strong>Genera imágenes.</strong>
+            <span>Filtra las mejores y usa keyframes claros para mantener estilo.</span>
+          </li>
+          <li>
+            <strong>Prepara el job de Flux.1.</strong>
+            <span>Define prompt, fps y fuerza de guía de imagen.</span>
+          </li>
+          <li>
+            <strong>Postprocesa.</strong>
+            <span>Interpola y aplica color grading si necesitas consistencia.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section id="comandos" class="section">
+        <h2>Comandos rápidos</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>1) Generar imágenes</h3>
+            <pre><code>python -m pixelcnn_flux1_pipeline generate-images \
+  --config configs/pixelcnn_config.json</code></pre>
+          </article>
+          <article class="card">
+            <h3>2) Preparar job de video</h3>
+            <pre><code>python -m pixelcnn_flux1_pipeline make-video \
+  --config configs/flux1_config.json</code></pre>
+          </article>
+          <article class="card">
+            <h3>3) Ejecutar todo</h3>
+            <pre><code>./scripts/run_pipeline.sh</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Artefactos generados</h2>
+        <ul class="list">
+          <li><strong>Imágenes:</strong> outputs/pixelcnn_samples/</li>
+          <li><strong>Metadata:</strong> outputs/pixelcnn_samples/metadata.json</li>
+          <li><strong>Job de video:</strong> outputs/flux1_job.json</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Próximos pasos</h2>
+        <p>
+          Conecta tus ejecutables reales de PixelCNN++ y Flux.1 en el pipeline para automatizar
+          la generación de videos. Usa los JSON de ejemplo como base y ajusta parámetros para
+          tu estilo.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Proyecto base: PixelCNN++ → Flux.1</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+[project]
+name = "pixelcnn-flux1-pipeline"
+version = "0.1.0"
+description = "Pipeline base para generar imágenes con PixelCNN++ y preparar jobs de Flux.1"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+cli = []
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
