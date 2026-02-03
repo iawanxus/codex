@@ -1,0 +1,9 @@
+{
+  "input_dir": "outputs/pixelcnn_samples",
+  "output_dir": "outputs",
+  "prompt": "slow dolly-in, soft lighting, cinematic",
+  "fps": 24,
+  "duration_seconds": 4,
+  "image_guidance": 0.6,
+  "keyframe_limit": 5
+}

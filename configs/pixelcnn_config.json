@@ -1,0 +1,8 @@
+{
+  "output_dir": "outputs/pixelcnn_samples",
+  "num_samples": 16,
+  "image_width": 64,
+  "image_height": 64,
+  "generate_dummy_images": true,
+  "seed": 42
+}
